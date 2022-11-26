@@ -1,0 +1,17 @@
+Package: REvolution
+Type: Package
+Title: REvolution makes phylogenetic trees from sequence file. 
+Version: 0.1.0
+Author: Mohammad Taghizadeh
+Maintainer: The package maintainer <mtaghizadeh@alumni.ut.ac.ir>
+Description: REvolution is a package to make phylogenetic trees from sequence 
+    file with protein sequences in fasta format. Also it makes a data structure
+    for fasta sequences. 
+License: Apache
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+usethis::use_package("ggplot2", "Suggests")
+Imports:
+    ggplot2,
+    protr
