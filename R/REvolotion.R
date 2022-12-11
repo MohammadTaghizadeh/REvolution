@@ -2,8 +2,11 @@
 
 # input type: sequence file
 seq_ds_matrix <- function(file.address){
-  seqpart <- readline( 'form SType, UPID, EnName, ProtName, OS, OX, GN,
-                        PE, SV, SeqFASTA, choose one: ')
+  seqpart <- readline( 'Enter your sequences, then,
+                        form SType, UPID, EnName,
+                        ProtName, OS, OX, GN,
+                        PE, SV, SeqFASTA,
+                        choose one: ')
 ## first step
 #  cat('Input the sequences:', '\n')
 #  array_seq <- read.table(file.address, sep = '\t',
@@ -91,8 +94,12 @@ return(seq_mat_all[, selpart])
 ############################# function seq_to_tree #####################################
 
 seq_to_tree <- function(seqs, seqnames){
-  meth = readline("select between: complete, ward.D, ward.D2, single,
-            complete, average, mcquitty, median, centroid ")
+  library(ggdendro)
+  library(ggplot2)
+  meth = readline("select between:
+                   complete, ward.D, ward.D2, single,
+                   complete, average, mcquitty,
+                   median, centroid ")
   sim_mat <- protr::parSeqSim(seqs, submat = 'BLOSUM80')
   colnames(sim_mat) <- seqnames
   rownames(sim_mat) <- seqnames
@@ -101,10 +108,24 @@ seq_to_tree <- function(seqs, seqnames){
   dist_m <- data.matrix(sim_mat)
 
   hclust_input <- as.dist(1 - dist_m, diag = FALSE, upper = FALSE)
-
-  par(mar = c(2,0,1,10))
-  plot(as.dendrogram(hclust(hclust_input, method = meth)), horiz = T)
+  ggdendrogram(hclust(hclust_input), size = 2)
+  #par(mar = c(2,0,1,10))
+  #plot(as.dendrogram(hclust(hclust_input, method = meth)), horiz = T)
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
