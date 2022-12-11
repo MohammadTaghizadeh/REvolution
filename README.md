@@ -1,6 +1,6 @@
 # REvolution
 REvolution
-
+![phylo_tree_01](https://user-images.githubusercontent.com/118055241/206899425-6eb7dd98-3fbf-4bd4-ac38-58a4af539aa8.jpg)
 This package is for making phylogenetic trees from protein sequences as sequence file with FASTA format. 
 
 To install the package, try:
