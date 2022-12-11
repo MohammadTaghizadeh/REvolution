@@ -2,16 +2,12 @@
 
 # input type: sequence file
 seq_ds_matrix <- function(file.address){
-  seqpart <- readline( 'Enter your sequences, then,
+  seqpart <- readline( 'Choose one of these options,
                         form SType, UPID, EnName,
                         ProtName, OS, OX, GN,
                         PE, SV, SeqFASTA,
-                        choose one: ')
+                        then, Enter your sequences: ')
 ## first step
-#  cat('Input the sequences:', '\n')
-#  array_seq <- read.table(file.address, sep = '\t',
-#                          stringsAsFactors = F,
-#                          quote = '')
 
   if(typeof(file.address) == 'list' ){array_seq <- file.address
   }else if(typeof(file.address) == 'character'){
