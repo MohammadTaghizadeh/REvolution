@@ -87,7 +87,10 @@ seq_ds_matrix <- function(file.address){
 
 return(seq_mat_all[, selpart])
 }
-############################# function seq_to_tree #####################################
+
+
+
+############################# function seq_to_tree ############################
 
 seq_to_tree <- function(seqs, seqnames){
   library(ggdendro)

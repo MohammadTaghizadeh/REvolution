@@ -19,3 +19,7 @@ seqs <- seq_ds_matrix(P53_sequences) #select SeqFASTA
 seqnames <- seq_ds_matrix(P53_sequences) #select UPID
 
 seq_to_tree(seqs, seqnames)
+
+-------------------------------------------------
+Data included in this package are P53_sequences and rRNA_sequences.
+rRNA sequences have been filtered so they are all complete sequences and not included on any N nucleotides.

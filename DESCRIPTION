@@ -11,7 +11,9 @@ License: Apache
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
-usethis::use_package("ggplot2", "Suggests")
+usethis: :use_package("ggplot2", "Suggests")
 Imports:
     ggplot2,
     protr
+Depends: 
+    R (>= 2.10)
