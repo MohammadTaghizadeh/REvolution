@@ -21,5 +21,7 @@ seqnames <- seq_ds_matrix(P53_sequences) #select UPID
 seq_to_tree(seqs, seqnames)
 
 -------------------------------------------------
-Data included in this package are P53_sequences and rRNA_sequences.
-rRNA sequences have been filtered so they are all complete sequences and not included on any N nucleotides.
+Data included in this package are P53_sequences, rRNA_16S_sequences and rRNA_5S_sequences.
+rRNA sequences are 16S rRNA sequences which have been filtered so they are all complete 
+sequences and not included on any N nucleotides. rRNA_5S_sequences is from RNAcentral database 
+an small filtering has been done of deleting sequences with Ns.  
